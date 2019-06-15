@@ -11,4 +11,8 @@ public class HelloWorld {
     public String getMessage() {
         return this.message;
     }
+
+    public String getIncorrectMessage() {
+        return "Bad Response: " + this.message;
+    }
 }

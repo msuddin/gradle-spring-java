@@ -29,4 +29,17 @@ public class HelloWorldTest {
         // Then
         Assert.assertThat(helloWorld.getMessage(), is(testMessage));
     }
+
+    @Test
+    public void shouldGetIncorrectCorrectHelloWorldMessage() {
+        // Given
+        final String testMessage = "This is a test";
+
+        // When
+        HelloWorld helloWorld = context.getBean(HelloWorld.class);
+        helloWorld.setMessage(testMessage);
+
+        // Then
+        Assert.assertThat(helloWorld.getIncorrectMessage(), is(testMessage));
+    }
 }
